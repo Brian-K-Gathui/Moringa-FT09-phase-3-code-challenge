@@ -35,17 +35,23 @@ class Article:
 
     @property
     def id(self):
-        """Get the ID of the article."""
+        """
+        Get the ID of the article.
+        """
         return self._id
 
     @property
     def title(self):
-        """Get the title of the article."""
+        """
+        Get the title of the article.
+        """
         return self._title
 
     @property
     def author(self):
-        """Retrieve the author of this article."""
+        """
+        Retrieve the author of this article.
+        """
         from models.author import Author  # Lazy import to avoid circular dependency
         connection = get_db_connection()
         cursor = connection.cursor()
@@ -56,7 +62,9 @@ class Article:
 
     @property
     def magazine(self):
-        """Retrieve the magazine of this article."""
+        """
+        Retrieve the magazine of this article.
+        """
         from models.magazine import Magazine  # Lazy import to avoid circular dependency
         connection = get_db_connection()
         cursor = connection.cursor()
@@ -66,7 +74,9 @@ class Article:
         return Magazine(row["id"], row["name"], row["category"]) if row else None
 
     def __repr__(self):
-        """Return the title of the Article."""
+        """
+        Return the title of the Article.
+        """
         return self._title
 
 

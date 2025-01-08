@@ -29,12 +29,16 @@ class Author:
 
     @property
     def id(self):
-        """Get the ID of the author."""
+        """
+        Get the ID of the author.
+        """
         return self._id
 
     @property
     def name(self):
-        """Get the name of the author."""
+        """
+        Get the name of the author.
+        """
         return self._name
 
     def articles(self):
@@ -69,5 +73,7 @@ class Author:
         return magazines
 
     def __repr__(self):
-        """Return the name of the Author."""
+        """
+        Return the name of the Author.
+        """
         return self._name

@@ -108,5 +108,7 @@ class Magazine:
         return authors
 
     def __repr__(self):
-        """Return the name of the Magazine."""
+        """
+        Return the name of the Magazine.
+        """
         return self._name
